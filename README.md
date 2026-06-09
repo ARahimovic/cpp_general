@@ -13,21 +13,21 @@ Each project lives in its own folder with its own source, and where applicable, 
 
 ---
 
-#### Bank Management System
+#### [Bank Management System](BankManagement/)
 A multi-class OOP system modelling a simplified banking backend.
 `BankManager` acts as a facade coordinating two managers: `AccountManager` (owns all `BankAccount` instances with O(1) lookup by both ID and name via dual maps) and `TransactionManager` (processes deposits and withdrawals, maintains a full transaction log).
 Demonstrates: facade pattern, separation of concerns, bidirectional map lookup, exception handling via a custom `BankException` hierarchy, and clean ownership semantics.
 
 ---
 
-#### Library Management System
+#### [Library Management System](LibraryManagement/)
 A domain-modelling project built around two core entities — `Book` (title, author, publication year, total/available copies) and `User` (name, birth date, borrowed books list).
 `BookManager` and `UserManager` handle their respective entities independently; `LibraryManager` coordinates the two for borrow and return operations, enforcing availability checks and keeping both sides in sync.
 Demonstrates: multi-manager architecture, entity relationships, business rule enforcement, and exception-driven error handling (`BookException`).
 
 ---
 
-#### Custom STL — Vector & String
+#### [Custom STL — Vector & String](Custom_STL/)
 Ground-up reimplementations of `std::vector` and `std::string` to understand C++ internals deeply.
 `MyVector` implements the rule of five (copy constructor, move constructor, copy assignment, move assignment, destructor), dynamic resizing with capacity doubling, `push_back`, `insert`, `resize`, `reserve`, random access via `operator[]` and `at()`, and STL-compatible iterators (`begin`/`end`/`cbegin`/`cend`).
 `MyString` covers similar ground for character buffer management.
@@ -39,7 +39,7 @@ Demonstrates: heap ownership, copy-swap idiom, move semantics, iterator design, 
 
 ---
 
-#### 1. Shell Interpreter
+#### [1. Shell Interpreter](shell_interpreter/)
 A functional Unix shell built from scratch in C++.
 Implements the full pipeline: input tokenization and command parsing, process creation via `fork`/`exec`, I/O redirection (`<`, `>`, `>>`), pipe chaining (`cmd1 | cmd2 | cmd3`), background processes (`&`), environment variable expansion, and a built-in command set (`cd`, `exit`, `export`, `echo`).
 A second pass adds a command history buffer (navigable with arrow keys via raw terminal mode) and basic tab completion.
@@ -47,7 +47,7 @@ Demonstrates deep systems-level C++: file descriptors, process management, signa
 
 ---
 
-#### 2. Custom STL — Containers & Algorithms (extension)
+#### [2. Custom STL — Containers & Algorithms (extension)](Custom_STL/)
 Extend the existing `vector` and `string` with a full suite of containers and algorithms implemented from scratch.
 
 **Containers:**
